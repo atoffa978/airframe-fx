@@ -63,20 +63,22 @@
       text-decoration: none;
       font-weight: bold;
     }
-    .gallery {
+    .carousel {
       display: flex;
-      flex-wrap: nowrap;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 2rem;
       overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 1rem;
+      padding: 1rem;
+      margin-top: 2rem;
+      justify-content: center;
     }
-    .gallery img {
-      height: 240px;
-      object-fit: cover;
-      aspect-ratio: 4 / 3;
-      border: 2px solid #ccc;
+    .carousel img {
+      scroll-snap-align: center;
+      max-height: 300px;
+      height: auto;
       border-radius: 8px;
+      border: 2px solid #ccc;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
   </style>
@@ -87,7 +89,7 @@
     <h1>Aerodinamica per il futuro del ciclismo</h1>
     <p>Innovazione brevettata per aumentare velocità, protezione e stile</p>
 
-    <div class="gallery">
+    <div class="carousel">
       <img src="image1.png" alt="Rendering Airframe-FX su bici da corsa">
       <img src="image2.png" alt="Airframe-FX su gravel strada sterrata">
       <img src="image3.jpeg" alt="AirframeFX prototipo">
@@ -133,3 +135,4 @@
   </footer>
 </body>
 </html>
+
