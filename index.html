@@ -42,7 +42,39 @@
       font-size: 1.1rem;
       font-style: italic;
       color: #bbb;
-      margin: 0;
+      margin: 0 0 1.5rem 0;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 1rem;
+      padding: 1rem;
+      justify-content: center;
+      background: #f0f0f0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .carousel a {
+      scroll-snap-align: center;
+      display: inline-block;
+    }
+
+    .carousel img {
+      max-height: 320px;
+      height: auto;
+      border-radius: 12px;
+      border: 2px solid #ccc;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      cursor: zoom-in;
+      transition: transform 0.3s;
+    }
+
+    .carousel img:hover {
+      transform: scale(1.03);
     }
 
     section {
@@ -65,7 +97,7 @@
     }
 
     section ul li::before {
-      content: "\2022";
+      content: "•";
       color: #007acc;
       display: inline-block;
       width: 1em;
@@ -118,11 +150,6 @@
     <img src="logo.jpg" alt="Airframe-FX logo" class="logo-img">
     <h1>Aerodinamica per il futuro del ciclismo</h1>
     <p>Velocità, protezione, visione</p>
-  </header>
-<header>
-    <img src="logo.jpg" alt="Airframe-FX logo" style="width: 480px; height: auto;">
-    <h1>Aerodinamica per il futuro del ciclismo</h1>
-    <p>velocità, protezione, visione</p>
     <div class="carousel">
       <a href="image1.png" target="_blank"><img src="image1.png" alt="Rendering Airframe-FX su bici da corsa"></a>
       <a href="image2.png" target="_blank"><img src="image2.png" alt="Airframe-FX su gravel strada sterrata"></a>
@@ -176,4 +203,5 @@
   </footer>
 </body>
 </html>
+
 
